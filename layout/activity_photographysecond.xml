@@ -1,0 +1,373 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteX="-204dp"
+    tools:layout_editor_absoluteY="3dp">
+
+    <!-- Top ImageView -->
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="419dp"
+        android:layout_height="385dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wedding_1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView"
+        android:layout_width="416dp"
+        android:layout_height="169dp"
+        app:layout_constraintBottom_toTopOf="@+id/scrollView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <!-- LinearLayout to hold the horizontal images -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Image 1 -->
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/wedding_1" />
+
+            <!-- Image 2 -->
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/photography" />
+
+            <!-- Image 3 -->
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/camara" />
+
+            <!-- Image 4 -->
+            <ImageView
+                android:id="@+id/image4"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/lence" />
+
+            <!-- Image 5 -->
+            <ImageView
+                android:id="@+id/image5"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/venue1" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+
+    <!-- ScrollView for all cards -->
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="32dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="336dp"
+        android:background="@drawable/bellicon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.931"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="125dp"
+        android:layout_height="114dp"
+        android:layout_marginBottom="304dp"
+        android:onClick="onLogo"
+        android:background="@drawable/logo"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.054"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/background_color"
+        app:layout_constraintTop_toBottomOf="@id/imageView4"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- LinearLayout to hold all cards -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView1"
+                android:layout_width="374dp"
+                android:layout_height="408dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="345dp"
+                    android:layout_height="383dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/card_title1"
+                        android:layout_width="314dp"
+                        android:layout_height="49dp"
+                        android:text="Package Name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/card_packages1"
+                        android:layout_width="313dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Description: Capturing your special moments."
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/card_description1"
+                        android:layout_width="313dp"
+                        android:layout_height="79dp"
+                        android:layout_marginTop="4dp"
+                        android:text="PRICE"
+                        android:textSize="14sp" />
+
+
+                    <RatingBar
+                        android:id="@+id/rating_bar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:numStars="5"
+                        android:rating="4.0"
+                        android:stepSize="0.5" />
+
+                    <!-- Book Now Button -->
+                    <Button
+                        android:id="@+id/book_now_button"
+                        android:layout_width="297dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/purpul"
+                        android:text="Book Now"
+                        android:onClick="onbooking"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="374dp"
+                android:layout_height="408dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="345dp"
+                    android:layout_height="383dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/card_title2"
+                        android:layout_width="314dp"
+                        android:layout_height="49dp"
+                        android:text="Package Name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/card_packages2"
+                        android:layout_width="313dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Description: Capturing your special moments."
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/card_description2"
+                        android:layout_width="313dp"
+                        android:layout_height="79dp"
+                        android:layout_marginTop="4dp"
+                        android:text="PRICE"
+                        android:textSize="14sp" />
+
+
+                    <RatingBar
+                        android:id="@+id/rating_bar2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:numStars="5"
+                        android:rating="4.0"
+                        android:stepSize="0.5" />
+
+                    <!-- Book Now Button -->
+                    <Button
+                        android:id="@+id/book_now_button2"
+                        android:layout_width="297dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/purpul"
+                        android:text="Book Now"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="374dp"
+                android:layout_height="408dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="8dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="345dp"
+                    android:layout_height="383dp"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:id="@+id/card_title3"
+                        android:layout_width="314dp"
+                        android:layout_height="49dp"
+                        android:text="Package Name"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/card_packages3"
+                        android:layout_width="313dp"
+                        android:layout_height="72dp"
+                        android:layout_marginTop="8dp"
+                        android:text="Description: Capturing your special moments."
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:id="@+id/card_description3"
+                        android:layout_width="313dp"
+                        android:layout_height="79dp"
+                        android:layout_marginTop="4dp"
+                        android:text="PRICE"
+                        android:textSize="14sp" />
+
+
+                    <RatingBar
+                        android:id="@+id/rating_bar3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:numStars="5"
+                        android:rating="4.0"
+                        android:stepSize="0.5" />
+
+                    <!-- Book Now Button -->
+                    <Button
+                        android:id="@+id/book_now_button3"
+                        android:layout_width="297dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="12dp"
+                        android:backgroundTint="@color/purpul"
+                        android:text="Book Now"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:background="@color/material_dynamic_neutral_variant99"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/nav_icon_home"
+            android:layout_width="48dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="30dp"
+            android:onClick="onLogo"
+            android:src="@drawable/th" />
+
+        <ImageView
+            android:id="@+id/nav_icon_message"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/message" />
+
+        <ImageView
+            android:id="@+id/nav_icon_placeholder"
+            android:layout_width="45dp"
+            android:layout_height="46dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/eventnew" />
+
+        <ImageView
+            android:id="@+id/nav_icon_cart"
+            android:layout_width="50dp"
+            android:layout_height="47dp"
+            android:layout_marginEnd="30dp"
+            android:src="@drawable/cart" />
+
+        <ImageView
+            android:id="@+id/nav_icon_account"
+            android:layout_width="49dp"
+            android:layout_height="47dp"
+            android:src="@drawable/account" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
