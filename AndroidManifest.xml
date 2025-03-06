@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="Home Message">
+        </activity>
+
+        <activity
+            android:name=".temp"
+            android:label="temp Message">
+        </activity>
+
+        <activity
+            android:name=".Hotel"
+            android:label="hotel Message">
+        </activity>
+
+        <activity
+            android:name=".PhotographySecond"
+            android:label="PhotographySecond Message">
+        </activity>
+
+        <activity
+            android:name=".Payment"
+            android:label="payment Message">
+        </activity>
+
+        <activity
+            android:name=".MusicBandsActivity"
+            android:label = "Music Bands">
+        </activity>
+
+        <activity
+            android:name=".CateringHomePageActivity"
+            android:label = "Catering Home Page">
+        </activity>
+        <activity
+            android:name=".HotBuffetActivity"
+            android:label = "Hot Buffet">
+        </activity>
+        <activity
+            android:name=".PalinRiceOrderViewActivity"
+            android:label = "Plain Rice Order View">
+        </activity>
+
+        <activity
+            android:name=".CateringServicesActivity"
+            android:label = "Catering Services">
+        </activity>
+
+
+
+        <activity
+            android:name=".EventSummaryActivity"
+            android:label="event summery Details">
+
+
+        </activity>
+
+
+        <activity android:name=".WeddingCategoryActivity"/>
+        <activity android:name=".WeddingShopActivity"/>
+
+
+
+        <activity
+            android:name=".EventHome"
+            android:label="lable Hotel package Details">
+
+        </activity>
+        <activity
+            android:name=".Seller"
+            android:label="lable Hotel package Details">
+
+        </activity>
+        <activity android:name=".AddSellerActivity"/>
+        <activity
+            android:name=".SellerView"
+            android:label="lable Hotel package Details">
+
+        </activity>
+        <activity android:name=".AddShopActivity"/>
+        <activity
+            android:name=".Event_create"
+            android:label="lable create event">
+
+        </activity>
+
+    </application>
+
+</manifest>
